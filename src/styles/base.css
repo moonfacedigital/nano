@@ -1,0 +1,106 @@
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    flex-shrink: 0;
+  }
+
+  .noise {
+    -webkit-animation: noise 1.2s steps(3) infinite both;
+    animation: noise 1.2 steps(3) infinite both;
+    background: url('/static/resources/background-noise.webp');
+    height: 200%;
+    left: -50%;
+    pointer-events: none;
+    position: fixed;
+    top: -50%;
+    width: 200%;
+    will-change: auto;
+    z-index: 99999;
+    opacity: 0.6;
+  }
+
+  @keyframes noise {
+    0% {
+      -webkit-transform: translate3d(1%, -1%, 0);
+      transform: translate3d(1%, -1%, 0);
+    }
+
+    10% {
+      -webkit-transform: translate3d(-5%, -2%, 0);
+      transform: translate3d(-5%, -2%, 0);
+    }
+
+    20% {
+      -webkit-transform: translate3d(10%, 5%, 0);
+      transform: translate3d(10%, 5%, 0);
+    }
+
+    30% {
+      -webkit-transform: translate3d(5%, -11%, 0);
+      transform: translate3d(5%, -11%, 0);
+    }
+
+    40% {
+      -webkit-transform: translate3d(-12%, -5%, 0);
+      transform: translate3d(-12%, -5%, 0);
+    }
+
+    50% {
+      -webkit-transform: translate3d(10%, 9%, 0);
+      transform: translate3d(10%, 9%, 0);
+    }
+
+    60% {
+      -webkit-transform: translate3d(15%, 0, 0);
+      transform: translate3d(15%, 0, 0);
+    }
+
+    70% {
+      -webkit-transform: translate3d(-10%, 8%, 0);
+      transform: translate3d(-10%, 8%, 0);
+    }
+
+    80% {
+      -webkit-transform: translate3d(10%, 2%, 0);
+      transform: translate3d(10%, 2%, 0);
+    }
+
+    90% {
+      -webkit-transform: translate3d(1%, 5%, 0);
+      transform: translate3d(1%, 5%, 0);
+    }
+
+    100% {
+      -webkit-transform: translate3d(0, 8%, 0);
+      transform: translate3d(0, 8%, 0);
+    }
+  }
+
+  code,
+  kbd,
+  samp,
+  pre {
+    letter-spacing: -0.015em;
+  }
+
+  .turbo-progress-bar {
+    background: #b1bfd0;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svelte App</title>
+  </head>
+  <body>
+    <script type="module">
+      function changeScript() {
+        let ifProd = import.meta.env.PROD
+        let script = document.createElement('script')
+        console.log(ifProd)
+        script.setAttribute('type', 'module')
+        if (ifProd) {
+          script.setAttribute('src', '/dist/main.iife.js')
+        } else {
+          script.setAttribute('src', '/src/index.js')
+        }
+        document.body.appendChild(script)
+      }
+      changeScript()
+    </script>
+  </body>
+</html>

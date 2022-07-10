@@ -1,0 +1,26 @@
+@layer components {
+  body {
+    @apply text-mf-neutral-700;
+  }
+  h1 {
+    @apply text-mf-slate-900 tracking-[-0.03em] text-3xl lg:text-4xl font-[570] my-3;
+  }
+  h2 {
+    @apply text-mf-slate-600 tracking-[-0.01em] leading-tight text-lg font-light my-2;
+  }
+  h3 {
+    @apply text-mf-slate-900 tracking-[-0.01em] leading-tight text-sm uppercase font-semibold my-1.5;
+  }
+  nav {
+    @apply fixed flex resp_cont left-1/2 -translate-x-1/2 pt-12 flex-row justify-between;
+  }
+  main {
+    @apply grid place-items-center w-full h-full -mt-12 lg:-mt-24;
+  }
+  .centered_cont {
+    @apply p-6 w-full max-w-[50ch] m-8 border-mf-neutral-400 border-2 rounded-md;
+  }
+  pre {
+    @apply px-2 py-0.5 inline-block bg-mf-neutral-100 rounded-sm font-mono font-medium;
+  }
+}
