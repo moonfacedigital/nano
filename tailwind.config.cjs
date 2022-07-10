@@ -215,34 +215,34 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         '.resp_cont': {
-          maxWidth: '100vw',
+          maxWidth: '100%',
           width: '100%',
           paddingLeft: '1rem',
           paddingRight: '1rem',
           marginRight: 'auto',
           marginLeft: 'auto',
           '@screen sm': {
-            maxWidth: '100vw',
+            maxWidth: '100%',
             paddingLeft: '1rem',
             paddingRight: '1rem',
           },
           '@screen md': {
-            maxWidth: '95vw',
+            maxWidth: '95%',
             paddingLeft: '2rem',
             paddingRight: '2rem',
           },
           '@screen lg': {
-            maxWidth: '90vw',
+            maxWidth: '90%',
             paddingLeft: '0rem',
             paddingRight: '0rem',
           },
           '@screen xl': {
-            maxWidth: '80vw',
+            maxWidth: '80%',
             paddingLeft: '0rem',
             paddingRight: '0rem',
           },
           '@screen 2xl': {
-            maxWidth: '70vw',
+            maxWidth: '70%',
             paddingLeft: '0rem',
             paddingRight: '0rem',
           },
