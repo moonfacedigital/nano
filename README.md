@@ -1,3 +1,3 @@
 # Nano
-## A svelte template for small yet performant apps ⚡🤏
+A svelte template for small yet performant apps ⚡🤏
 
