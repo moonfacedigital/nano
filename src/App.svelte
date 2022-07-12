@@ -1,9 +1,12 @@
 <script>
   import './styles/_main.css'
+
   import HomePage from './Home.svelte'
   import SecondPage from './SecondPage.svelte'
 
-  const tabs = [
+  import InlineSVG from 'svelte-inline-svg'
+
+  let tabs = [
     { name: 'Home', component: HomePage },
     { name: 'Second Page', component: SecondPage },
   ]
@@ -12,24 +15,44 @@
 
   // Have to use obj as arg. so value can be a class
   const initTab = (obj) => (selectedTab = obj)
+
+  // let currentTab = sessionStorage.getItem('activeTab')
+
   function tabHistory(e) {
-    let activeTab = e.target.name
+    let t = e.target
+    let activeTab = t.getAttribute('title')
     console.log(activeTab)
+    activeTabString = JSON.stringify(activeTab)
   }
 
-  // Loads an object in webpages array
   let selectedTab = tabs[0]
+  // let getToken = sessionStorage.getItem('activeTab')
+  // if (getToken) {
+  //   selectedTab = activeTabString
+  // }
+
+  $: githubLogoAttrs = {
+    class: 'text-inherit w-7 h-7',
+    alt: 'Github Logo',
+  }
+
+  $: mfIcoAttrs = {
+    class: 'text-inherit w-full',
+    alt: 'Github Logo',
+  }
 </script>
 
 <div class="nano_app">
-  <nav>
+  <nav class="text-mf-slate-900">
     <button
       class="w-10 h-10"
       title={tabs[0].name}
       component={tabs[0].component}
       on:click={() => initTab(tabs[0])}
-      on:click={tabHistory}><img src="/mf-ico.svg" alt="logo" /></button
+      on:click={tabHistory}
     >
+      <InlineSVG src={'/mf-ico.svg'} {...mfIcoAttrs} />
+    </button>
     <ul class="flex flex-row gap-8 items-center">
       {#each tabs as tab}
         <button
@@ -41,12 +64,8 @@
         >
       {/each}
       <li>
-        <a href="https://github.com/moonfacedigital/atmos">
-          <img
-            class="w-7 h-7"
-            src="/static/resources/github-logo.svg"
-            alt="Github Logo"
-          />
+        <a href="https://github.com/moonfacedigital/nano">
+          <InlineSVG src={'/github-logo.svg'} {...githubLogoAttrs} />
         </a>
       </li>
     </ul>
