@@ -1,6 +1,9 @@
 @layer utilities {
   main {
     flex: 1 0 auto;
+    max-height: 100%;
+    padding-bottom: 4rem;
+    position: relative;
   }
 
   footer {
@@ -77,5 +80,21 @@
       -webkit-transform: translate3d(0, 8%, 0);
       transform: translate3d(0, 8%, 0);
     }
+  }
+
+  .nano_cont::-webkit-scrollbar {
+    width: 1rem; /* width of the entire scrollbar */
+  }
+  .nano_cont::-webkit-scrollbar-track {
+    background: #f3f2f1; /* color of the tracking area */
+  }
+  .nano_cont::-webkit-scrollbar-thumb {
+    background-color: #b1b4b6; /* color of the scroll thumb */
+    border-radius: 999px; /* roundness of the scroll thumb */
+    border: 0.4rem solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+  }
+  .turbo-progress-bar {
+    background: #b1bfd0;
   }
 }

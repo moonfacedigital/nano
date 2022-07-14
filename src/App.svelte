@@ -42,35 +42,39 @@
   }
 </script>
 
-<div class="nano_app">
-  <nav class="text-mf-slate-900">
-    <button
-      class="w-10 h-10"
-      title={tabs[0].name}
-      component={tabs[0].component}
-      on:click={() => initTab(tabs[0])}
-      on:click={tabHistory}
-    >
-      <InlineSVG src={'/mf-ico.svg'} {...mfIcoAttrs} />
-    </button>
-    <ul class="flex flex-row gap-8 items-center">
-      {#each tabs as tab}
+<div class="nano_wrapper">
+  <div class="nano_app">
+    <div class="nano_cont">
+      <nav class="text-mf-slate-900">
         <button
-          class="tablink"
-          title={tab.name}
-          component={tab.component}
-          on:click={() => initTab(tab)}
-          on:click={tabHistory}>{tab.name}</button
+          class="w-10 h-10"
+          title={tabs[0].name}
+          component={tabs[0].component}
+          on:click={() => initTab(tabs[0])}
+          on:click={tabHistory}
         >
-      {/each}
-      <li>
-        <a href="https://github.com/moonfacedigital/nano">
-          <InlineSVG src={'/github-logo.svg'} {...githubLogoAttrs} />
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <main>
-    <svelte:component this={selectedTab.component} />
-  </main>
+          <InlineSVG src={'/mf-ico.svg'} {...mfIcoAttrs} />
+        </button>
+        <ul class="flex flex-row gap-8 items-center">
+          {#each tabs as tab}
+            <button
+              class="tablink"
+              title={tab.name}
+              component={tab.component}
+              on:click={() => initTab(tab)}
+              on:click={tabHistory}>{tab.name}</button
+            >
+          {/each}
+          <li>
+            <a href="https://github.com/moonfacedigital/nano">
+              <InlineSVG src={'/github-logo.svg'} {...githubLogoAttrs} />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <svelte:component this={selectedTab.component} />
+      </main>
+    </div>
+  </div>
 </div>

@@ -2,7 +2,7 @@
   const name = 'Nano' // edit world and save to see hmr update
 </script>
 
-<div class="relative grid place-items-center w-full h-full">
+<div class="relative grid place-items-center">
   <div class="centered_cont">
     <header>
       <h1>This is {name}</h1>

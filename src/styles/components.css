@@ -1,6 +1,12 @@
 @layer components {
+  .nano_wrapper {
+    @apply fixed w-full h-full inset-0 pointer-events-none;
+  }
   .nano_app {
-    @apply w-[50em] max-w-full mx-auto bg-neutral-50 fixed;
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[60em] max-w-full bg-[#f3f2f1] p-3 pointer-events-auto;
+  }
+  .nano_cont {
+    @apply w-full h-[70vh] overflow-y-auto;
   }
   h1 {
     @apply text-mf-slate-900 tracking-[-0.03em] text-3xl lg:text-4xl font-[570] my-3;
@@ -12,7 +18,7 @@
     @apply text-mf-slate-900 tracking-[-0.01em] leading-tight text-sm uppercase font-semibold my-1.5;
   }
   main {
-    @apply pt-8 lg:pt-12 w-full h-full;
+    @apply pt-8 lg:pt-12 w-full;
   }
   nav {
     @apply flex resp_cont pt-12 flex-row justify-between;

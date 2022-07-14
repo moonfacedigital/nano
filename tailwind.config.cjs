@@ -13,6 +13,7 @@ module.exports = {
         'mf-neutral': {
           50: '#F9FAFB',
           100: '#F3F4F6',
+          'c-1/4': '#F0F1F2',
           200: '#E5E7EB',
           300: '#D1D5DB',
           400: '#9CA3AF',
