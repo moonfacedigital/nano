@@ -1,3 +1,7 @@
+<img src="https://user-images.githubusercontent.com/45979758/179194036-fe27cd10-f509-427d-a538-7b9a994bd88b.svg" height="25px"/>&nbsp;&nbsp;</br>
+Not recommended for production
+
+
 # Nano
 A svelte template for small yet performant apps ⚡🤏
 
