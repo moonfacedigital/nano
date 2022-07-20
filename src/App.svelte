@@ -1,6 +1,4 @@
 <script>
-  import './styles/_main.css'
-
   import HomePage from './Home.svelte'
   import SecondPage from './SecondPage.svelte'
 
@@ -78,3 +76,15 @@
     </div>
   </div>
 </div>
+
+<style lang="postcss">
+  @import '../src/styles/components.css';
+
+  @import '../src/styles/utils.css';
+
+  @import '../src/styles/_shame.css';
+
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+</style>
